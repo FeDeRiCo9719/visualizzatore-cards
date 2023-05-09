@@ -146,6 +146,7 @@ let cardBox = document.getElementById('cardBox');
 let loadingScreen = document.querySelector('.loadingBg');
 let selectedCard = 0;
 let selectCols = document.getElementById('selectCols');
+let btnBackHome = document.getElementById('btnBackHome');
 
 
 /*
@@ -198,13 +199,16 @@ function clickedCard(id) {
     cnt.classList.add("hidden");
     selectCols.classList.add("hidden");
     cardCnt.classList.remove("hidden");
+    btnBackHome.classList.remove("hidden");
     
     cardBox.innerHTML = `
-    <div class="card">
+    <div class="cardItem card">
         <i class="${cards[id].family} ${cards[id].prefix}${cards[id].name}" style="color: ${cards[id].color};"></i>
-        <div>${cards[id].name}</div>
     </div>
-    <p>${cards[id].text}</p>
+    <div class="cardInfo">
+        <h2>${cards[id].name}-${cards[id].color}</h2>
+        <p>${cards[id].text}</p>
+    </div>
     `;
 }
 
@@ -235,6 +239,7 @@ function backToHome() {
     cnt.classList.remove("hidden");
     selectCols.classList.remove("hidden");
     cardCnt.classList.add("hidden");
+    btnBackHome.classList.add("hidden");
 }
 
 selectCols.addEventListener( 'change', () => {

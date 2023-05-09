@@ -20,7 +20,7 @@
     <!--===================================== HEADER =====================================-->
     <header>
         <div class="title">
-            <h2>Logo</h2>
+            <h2>Brand</h2>
         </div>
         <nav class="nav">            
             <select name="columns" id="selectCols">
@@ -29,6 +29,8 @@
                 <option value="6">6 Colonne</option>
                 <option value="3">3 Colonne</option>
             </select>
+
+            <button class="btn hidden" id="btnBackHome" onclick="backToHome()">Torna alla Home</button>
         </nav>
     </header>
 
@@ -40,15 +42,17 @@
         </div>
 
         <!------------------------------ IMMAGINE SELEZIONATA ------------------------------>
-        <div id="cardContainer" class="hidden" style="text-align: center;" >
+        <div id="cardContainer" class="hidden">
 
             <!-- card -->
             <div id="cardBox" class="flex"></div>
 
             <!-- buttons -->
-            <button class="btn" onclick="prevImg()">Prev</button>
-            <button class="btn" onclick="nextImg()">Next</button>
-            <button class="btn" onclick="backToHome()">Torna alla Home</button>
+            <div class="boxButtons">
+                <button class="btn" onclick="prevImg()">Prev</button>
+                <button class="btn" onclick="nextImg()">Next</button>
+            </div>
+            
         </div>
 
         <!------------------------------ LOADING ------------------------------>
@@ -63,6 +67,7 @@
         </div>
         
     </main>
+    
     <script src="Js/script.js"></script>
 </body>
 </html>
