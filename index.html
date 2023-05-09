@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>Project</title>
+</head>
+<body>
+    <!--===================================== HEADER =====================================-->
+    <header>
+        <div class="title">
+            <h2>Logo</h2>
+        </div>
+        <nav class="nav">            
+            <select name="columns" id="selectCols">
+                <option value="12">12 Colonne</option>
+                <option value="9">9 Colonne</option>
+                <option value="6">6 Colonne</option>
+                <option value="3">3 Colonne</option>
+            </select>
+        </nav>
+    </header>
+
+    <!--===================================== MAIN =====================================-->
+    <main>
+        <!------------------------------ CAROSELLO ------------------------------>
+        <div id="mainContainer" class="cntCardsHome">
+
+        </div>
+
+        <!------------------------------ IMMAGINE SELEZIONATA ------------------------------>
+        <div id="cardContainer" class="hidden" style="text-align: center;" >
+
+            <!-- card -->
+            <div id="cardBox" class="flex"></div>
+
+            <!-- buttons -->
+            <button class="btn" onclick="prevImg()">Prev</button>
+            <button class="btn" onclick="nextImg()">Next</button>
+            <button class="btn" onclick="backToHome()">Torna alla Home</button>
+        </div>
+
+        <!------------------------------ LOADING ------------------------------>
+        <div class="loadingBg hidden">
+            <div class="cntBar">
+                <!-- <div class="outsideBar">
+                    <div class="bar"></div>
+                </div> -->
+
+                <div class="loader"></div>
+            </div>
+        </div>
+        
+    </main>
+    <script src="Js/script.js"></script>
+</body>
+</html>

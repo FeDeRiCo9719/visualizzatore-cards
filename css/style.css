@@ -1,0 +1,184 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* common /-------------------------------*/
+body {
+    font-family: 'Raleway', sans-serif;
+    /* height: 100vh; */
+    /* background-color: aqua; */
+}
+
+/* header /-------------------------------*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 100px;
+    padding: 0 50px;
+    background-color: rgb(188, 188, 188);
+}
+.title {
+    background-color: rgb(202, 202, 202);
+    height: 100%;
+}
+.title h2 {
+    background-color: rgba(128, 255, 0, 0);
+    line-height: 100px;
+    font-size: 40px;
+    font-weight: 600;
+    color: rgb(36, 36, 36);
+}
+
+/*-------------------------------/ MAIN /-------------------------------*/
+main {
+    background-color: rgb(66, 66, 66);
+    min-height: calc(100vh - 100px);
+    color: white;
+    padding: 50px;
+    position: relative;
+}
+/*---------------/ Home Imgs /----------------*/
+.cntCardsHome {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.cards_12 {
+    width: calc(100% / 12 - ((20px * 11) / 12));
+}
+.cards_9 {
+    width: calc(100% / 9 - ((20px * 8) / 9));
+}
+.cards_6 {
+    width: calc(100% / 6 - ((20px * 5) / 6));
+}
+.cards_3 {
+    width: calc(100% / 3 - ((20px * 2) / 3));
+}
+
+.card {
+    background-color: rgb(116, 116, 116);
+    border: 1px solid white;
+    box-shadow: 5px 8px 8px 5px #00000048;
+    text-align: center;
+    border-radius: 5px;
+    padding: 20px;
+    cursor: pointer;
+} 
+.card:hover {
+    transition: 0.2s;
+    background-color: rgb(99, 99, 99);
+}
+.card:active {
+    background-color: rgb(43, 43, 43);
+}  
+.card i {
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+/*---------------/ Img visualizzata /----------------*/
+#cardBox {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+#cardBox p {
+    width: 500px;
+    color: lightgray;
+}
+#cardBox p strong {
+    color: white;
+}
+
+/* COMMON CALSSES /-------------------------------*/
+.flex {
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid red; */
+}
+.hidden {
+    display: none;
+}
+
+.loadingBg {
+
+    background-color: rgb(52, 52, 52);
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+    
+    opacity: 0;
+    transition: 0.2s;
+}
+.cntBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.outsideBar {
+    width: 200px;
+    height: 5px;
+    background-color: grey;
+}
+.bar {
+    width: 0px;
+    height: 5px;
+    transition: width 0.7s;
+    background-color: white;
+}
+.expandWidth {
+    width: 200px;
+}
+.opacity {
+    opacity: 1;
+    transition: 0.2s;
+}
+
+.loader {
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #3498db00;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+
+    -webkit-animation: spin 0.6s linear infinite; /* Safari */
+    animation: spin 0.6s linear infinite;
+}
+/* Safari */
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/*------- BTN -------/-------------------------------*/
+.btn {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: lightgray;
+    color: black;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+}
+.btn:active {
+    background-color: rgb(169, 169, 169);
+}
+.btn:hover {
+    border: 2px solid white;
+}
